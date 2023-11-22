@@ -232,7 +232,8 @@ padding-vertical.px: 8
 margin-right.px: 24
 border-radius.px: 64
 anchor: window
-bottom.px: 24
+bottom.px: 8
+shadow: $s
 
 -- ftd.column:
 width: fill-container
@@ -635,7 +636,7 @@ color: $inherited.colors.text-strong
 -- ftd.row:
 width: fill-container
 align-content: center
-spacing.fixed.px: 64
+spacing.fixed.px: 28
 margin-top.px: 24
 wrap: true
 
@@ -778,6 +779,7 @@ src: $slide-page-six.image
 width.fixed.percent: 46
 height: fill-container
 fit: cover
+shadow: $s
 
 -- ftd.column:
 width.fixed.percent: 50
@@ -785,7 +787,7 @@ spacing.fixed.px: 24
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 12
+spacing.fixed.px: 24
 
 -- ftd.text: $slide-page-six.number
 if: { slide-page-six.number != NULL }
@@ -820,6 +822,7 @@ src: $slide-page-six.image
 width.fixed.percent: 46
 height: fill-container
 fit: cover
+shadow: $s
 
 -- end: ftd.row
 
@@ -978,8 +981,7 @@ width.fixed.px: 420
 height.fixed.px: 200
 fit: cover
 border-radius.px: 8
-border-width.px: 8
-border-color: $inherited.colors.info.border
+shadow: $s
 
 -- end: image-details
 
@@ -1003,7 +1005,8 @@ border-width.px: 2
 align-content: center
 border-radius.px: 8
 border-color: $inherited.colors.border
-padding.px: 12
+padding-horizontal.px: 18
+padding-vertical.px: 24
 
 -- ftd.text: $section-details.number
 role: $inherited.types.heading-small
@@ -1096,3 +1099,12 @@ a = (((a - min) - by) % ((max+1)- min)) + min
 src: $assets.files.assets.back1.jpg
 repeat: no-repeat
 fit: contain
+
+
+
+-- ftd.shadow s: 
+color: #000000
+x-offset.px: 1 
+y-offset.px: 1 
+blur.px: 20
+spread.px: 0
