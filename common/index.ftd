@@ -1,0 +1,83 @@
+-- record all-topic:
+caption title:
+
+-- all-topic list topic-list:
+
+-- all-topic: Lorem ipsum dolor sit amet
+
+-- all-topic: Consectetur adipiscing elit
+
+-- all-topic: Medium font title of presentation
+
+-- all-topic: Medium title of 2 columns slide
+
+-- all-topic: Medium font section title
+
+-- all-topic: Medium font sub title here
+
+-- end: topic-list
+
+
+
+
+
+-- record all-section:
+caption number:
+body body:
+
+-- all-section list section-list:
+
+-- all-section:
+number: 1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet
+
+-- all-section:
+number: 2
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet
+
+-- all-section:
+number: 3
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet
+
+-- all-section:
+number: 4
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet
+
+-- end: section-list
+
+
+
+
+
+-- record list-of-images:
+ftd.image-src image:
+
+-- list-of-images list images-list:
+
+-- list-of-images:
+image: $assets.files.assets.img-1.jpg 
+
+-- list-of-images:
+image: $assets.files.assets.img-2.jpg 
+
+-- list-of-images:
+image: $assets.files.assets.img-3.jpg
+
+-- list-of-images:
+image: $assets.files.assets.img-4.jpg
+
+-- list-of-images:
+image: $assets.files.assets.img-5.jpg 
+
+-- list-of-images:
+image: $assets.files.assets.img-6.jpg
+
+-- end: images-list
