@@ -131,7 +131,7 @@ reset: $active-slide
 -- component page:
 caption title:
 children wrapper:
-ftd.color-scheme colors: $cs.main
+;;ftd.color-scheme colors: $cs.main
 
 -- ftd.column:
 width: fill-container
