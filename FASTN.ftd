@@ -6,12 +6,11 @@ favicon: /-/meenukumari28.github.io/slide-template-2/favicon.ico
 -- fastn.dependency: fastn-community.github.io/doc-site as doc-site
 -- fastn.dependency: fastn-community.github.io/footer
 -- fastn.dependency: fastn-community.github.io/roboto-typography
--- fastn.dependency: fastn-community.github.io/dark-flame-cs as cs
+-- fastn.dependency: fastn-community.github.io/dark-flame-cs
 
 -- fastn.auto-import: meenukumari28.github.io/slide-template-2/FASTN/ds
 -- fastn.auto-import: meenukumari28.github.io/slide-template-2/assets
 -- fastn.auto-import: doc-site
--- fastn.auto-import: cs
 
 -- fastn.sitemap:
 
