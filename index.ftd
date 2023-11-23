@@ -32,12 +32,6 @@ consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
 dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
 -- slide-page-four: This is forth slide
 section-list: $common.section-list
 $current-slide: $active-slide
@@ -46,24 +40,13 @@ reset: $active-slide
 
 -- slide-page-five: This is fifth slide
 bg-image: $assets.files.assets.back1.jpg
+img-1: $assets.files.assets.img-1.jpg
+img-2: $assets.files.assets.img-2.jpg
+img-3: $assets.files.assets.img-3.jpg
+img-4: $assets.files.assets.img-4.jpg
 $current-slide: $active-slide
 index: 5
 reset: $active-slide
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua.
 
 -- slide-page-six: This is sixth slide
 number: 01
@@ -144,14 +127,14 @@ background.solid: $inherited.colors.background.base
 role: $inherited.types.heading-medium
 color: $inherited.colors.text-strong
 
-/-- dms.dark-mode-switcher-float:
-
 -- ftd.column:
 width: fill-container
 children: $page.wrapper
 align-content: center
 
 -- end: ftd.column
+
+-- dms.dark-mode-switcher-float:
 
 -- end: ftd.column
 
@@ -185,7 +168,6 @@ align-content: center
 
 -- ftd.column:
 width: fill-container
-width.fixed.px if { !show-full-screen }: 1020
 background.solid: $inherited.colors.background.step-1
 height.fixed.percent: 100
 min-height.fixed.px: 560
@@ -193,7 +175,6 @@ anchor if { $show-full-screen }: window
 left.px: 0
 top.px: 0
 z-index: 1
-$on-global-key[esc]$: $ftd.set-bool($a = $show-full-screen, v = false)
 
 -- ftd.row:
 width: fill-container
@@ -234,10 +215,6 @@ border-radius.px: 64
 anchor: window
 bottom.px: 8
 shadow: $s
-
--- ftd.column:
-width: fill-container
-align-content: center
 
 -- ftd.row:
 align-content: center
@@ -291,21 +268,6 @@ width.fixed.px: 24
 height.fixed.px: 24
 
 -- end: ftd.row
-
--- end: ftd.column
-
--- ftd.column:
-
--- ftd.image:
-src: $assets.files.assets.full-screen.svg
-src if { presentation.mouse-in-full } : $assets.files.assets.full-screen-active.svg
-$on-click$: $ftd.toggle($a = $show-full-screen)
-$on-mouse-enter$: $ftd.set-bool($a = $presentation.mouse-in-full, v = true)
-$on-mouse-leave$: $ftd.set-bool($a = $presentation.mouse-in-full, v = false)
-padding-right.px: 18
-cursor: pointer
-
--- end: ftd.column
 
 -- end: ftd.row
 
@@ -578,8 +540,9 @@ color: $inherited.colors.text-strong
 -- end: ftd.column
 
 -- ftd.text: 
-role: $inherited.types.copy-large
+role: $inherited.types.heading-medium
 color: $inherited.colors.text-strong
+style: regular
 padding-horizontal.px: 64
 
 $slide-page-three.body
@@ -662,7 +625,10 @@ body: $obj.body
 
 -- component slide-page-five:
 caption title:
-body body:
+ftd.image-src img-1:
+ftd.image-src img-2:
+ftd.image-src img-3:
+ftd.image-src img-4:
 optional ftd.background-image bg-image:
 optional integer index:
 optional integer reset:
@@ -701,19 +667,39 @@ color: $inherited.colors.text-strong
 
 -- end: ftd.column
 
--- ftd.column:
+-- ftd.row:
 width.fixed.percent: 56
 height: fill-container
-padding-horizontal.px: 64
+padding-horizontal.px: 24
 padding-top.px: 64
+spacing.fixed.px: 18
+wrap: true
 
--- ftd.text:
-role: $inherited.types.copy-large
-color: $inherited.colors.text-strong
+-- ftd.image:
+src: $slide-page-five.img-1
+width.fixed.px: 360
+height.fixed.px: 280
+fit: cover
 
-$slide-page-five.body
+-- ftd.image:
+src: $slide-page-five.img-2
+width.fixed.px: 360
+fit: cover
+height.fixed.px: 280
 
--- end: ftd.column
+-- ftd.image:
+src: $slide-page-five.img-3
+width.fixed.px: 360
+fit: cover
+height.fixed.px: 280
+
+-- ftd.image:
+src: $slide-page-five.img-4
+width.fixed.px: 360
+fit: cover
+height.fixed.px: 280
+
+-- end: ftd.row
 
 -- end: ftd.row
 
@@ -1040,8 +1026,9 @@ $section-details.body
 caption title:
 
 -- ftd.row:
-width.fixed.px: 380
-spacing.fixed.px: 8
+width: fill-container
+padding-left.px: 24
+spacing.fixed.px: 12
 
 -- ftd.row:
 width.fixed.px: 8
@@ -1053,8 +1040,9 @@ align-self: center
 -- end: ftd.row
 
 -- ftd.text: $topic-list-detail.title
-role: $inherited.types.copy-large
+role: $inherited.types.heading-medium
 color: $inherited.colors.text-strong
+style: regular
 
 -- end: ftd.row
 
